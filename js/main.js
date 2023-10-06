@@ -1,32 +1,19 @@
-  /*----- constants -----*/
-  const suits = ['s', 'c', 'd', 'h'];
-  const ranks = ['02', '03', '04', '05', '06', '07', '08', '09', '10', 'J', 'Q', 'K', 'A'];
+/*----- constants -----*/
+const suits = ['s', 'c', 'd', 'h'];
+const ranks = ['02', '03', '04', '05', '06', '07', '08', '09', '10', 'J', 'Q', 'K', 'A'];
 
-  /*----- state variables -----*/
-let shuffledDeck;
-
-  /*----- cached elements  -----*/
 // Build an 'original' deck of 'card' objects used to create shuffled decks
 const originalDeck = buildOriginalDeck();
 renderDeckInContainer(originalDeck, document.getElementById('original-deck-container'));
 
+/*----- app's state (variables) -----*/
+let shuffledDeck;
+
+/*----- cached element references -----*/
 const shuffledContainer = document.getElementById('shuffled-deck-container');
 
-  /*----- event listeners -----*/
-  document.querySelector('button').addEventListener('click', renderNewShuffledDeck);
-
-
-  function handleMove(evt) {
-    // Check if we should exit the function
-    // according to the current state
-    // For example, ignore clicks if the
-    // game has been won or is a tie:
-    if (winner) return;
-    // Logic/Code to update all impacted state
-    ...
-    // Visualize all state
-    render();
-  }
+/*----- event listeners -----*/
+document.querySelector('button').addEventListener('click', renderNewShuffledDeck);
 
 /*----- functions -----*/
 function getNewShuffledDeck() {
@@ -55,7 +42,7 @@ function renderDeckInContainer(deck, container) {
   deck.forEach(function(card) {
     cardsHtml += `<div class="card ${card.face}"></div>`;
   });
-  // Or, use reduce to 'reduce' the array into a single thing - in this case a string of HTML markup
+  // Or, use reduce to 'reduce' the array into a single thing - in this case a string of HTML markup 
   // const cardsHtml = deck.reduce(function(html, card) {
   //   return html + `<div class="card ${card.face}"></div>`;
   // }, '');
@@ -79,11 +66,3 @@ function buildOriginalDeck() {
 }
 
 renderNewShuffledDeck();
-
-
-  function render() {
-    renderBoard();
-    renderScores();
-    renderControls();
-    renderMessages();
-  }
