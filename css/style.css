@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+}
+
+header {
+    font-size: 30px;
+}
+
+h1{
+    font-size: 20px;
+    color: blueviolet;
+}
+
+#board {
+    display: grid;
+    height: 500px;
+    flex-direction: column;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 300px;
+    justify-content: center;
+}
+
+#yourDeck{
+    background-color: gold;
+}
+
+#computerDeck{
+    background-color: silver;
+
+}
+
+#controls{
+    display: grid;
+    height: 500px;
+    flex-direction: column;
+    grid-template-columns: 150px 150px;
+    grid-column-gap: 20px;
+}

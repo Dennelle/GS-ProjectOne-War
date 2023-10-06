@@ -1,89 +1,57 @@
-  /*----- constants -----*/
-  const suits = ['s', 'c', 'd', 'h'];
-  const ranks = ['02', '03', '04', '05', '06', '07', '08', '09', '10', 'J', 'Q', 'K', 'A'];
-
-  /*----- state variables -----*/
-let shuffledDeck;
-
-  /*----- cached elements  -----*/
-// Build an 'original' deck of 'card' objects used to create shuffled decks
-const originalDeck = buildOriginalDeck();
-renderDeckInContainer(originalDeck, document.getElementById('original-deck-container'));
-
-const shuffledContainer = document.getElementById('shuffled-deck-container');
-
-  /*----- event listeners -----*/
-  document.querySelector('button').addEventListener('click', renderNewShuffledDeck);
+/*----- constants -----*/
+const suits = ['s', 'c', 'd', 'h']; //probably won't use this
+let ranks = ['02', '03', '04', '05', '06', '07', '08', '09', '10', 'J', 'Q', 'K', 'A'];
+const shuffleBtn = document.querySelector('#shuffle');
 
 
-  function handleMove(evt) {
-    // Check if we should exit the function
-    // according to the current state
-    // For example, ignore clicks if the
-    // game has been won or is a tie:
-    if (winner) return;
-    // Logic/Code to update all impacted state
-    ...
-    // Visualize all state
-    render();
-  }
+/*----- state variables: what information does the application need to remember throughout its execution-----*/
+let turn; //1 or -1
+let winner; // 1 or -1 = winner; 'T' = Tie
+
+/*----- cached elements -----*/
+const playCardBtn = document.querySelector('#playCard');
+const randomCard = ranks[(Math.floor(Math.random() * ranks.length))];
+
+let Player = {
+    name:'One',
+    score: 0
+}
+
+/*----- event listeners -----*/
+shuffleBtn.addEventListener('click', init());
+
+
+//it only generates a random number once.
+playCardBtn.addEventListener('click', function(){
+    console.log(randomCard)
+});
+//
+shuffleBtn.addEventListener('click',function(){
+    document.querySelector('h1').innerText = "Let's Play!"
+});
 
 /*----- functions -----*/
-function getNewShuffledDeck() {
-  // Create a copy of the originalDeck (leave originalDeck untouched!)
-  const tempDeck = [...originalDeck];
-  const newShuffledDeck = [];
-  while (tempDeck.length) {
-    // Get a random index for a card still in the tempDeck
-    const rndIdx = Math.floor(Math.random() * tempDeck.length);
-    // Note the [0] after splice - this is because splice always returns an array and we just want the card object in that array
-    newShuffledDeck.push(tempDeck.splice(rndIdx, 1)[0]);
-  }
-  return newShuffledDeck;
+
+
+init();
+
+// initialize all state, then call render()
+function init(){
+    turn = 1;
+    winner = null;
+    render();
 }
 
-function renderNewShuffledDeck() {
-  // Create a copy of the originalDeck (leave originalDeck untouched!)
-  shuffledDeck = getNewShuffledDeck();
-  renderDeckInContainer(shuffledDeck, shuffledContainer);
+function render() {
+
 }
 
-function renderDeckInContainer(deck, container) {
-  container.innerHTML = '';
-  // Let's build the cards as a string of HTML
-  let cardsHtml = '';
-  deck.forEach(function(card) {
-    cardsHtml += `<div class="card ${card.face}"></div>`;
-  });
-  // Or, use reduce to 'reduce' the array into a single thing - in this case a string of HTML markup
-  // const cardsHtml = deck.reduce(function(html, card) {
-  //   return html + `<div class="card ${card.face}"></div>`;
-  // }, '');
-  container.innerHTML = cardsHtml;
-}
+/*----- Things I need
 
-function buildOriginalDeck() {
-  const deck = [];
-  // Use nested forEach to generate card objects
-  suits.forEach(function(suit) {
-    ranks.forEach(function(rank) {
-      deck.push({
-        // The 'face' property maps to the library's CSS classes for cards
-        face: `${suit}${rank}`,
-        // Setting the 'value' property for game of blackjack, not war
-        value: Number(rank) || (rank === 'A' ? 11 : 10)
-      });
-    });
-  });
-  return deck;
-}
+- an event listener for the shuffle/start button
+- an event listener for the play button
+- an object for player and computer
+- the player should be able to enter their name
+- the player wins if they have the most cards at the end.
 
-renderNewShuffledDeck();
-
-
-  function render() {
-    renderBoard();
-    renderScores();
-    renderControls();
-    renderMessages();
-  }
+-----*/
