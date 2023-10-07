@@ -1,36 +1,76 @@
 /*----- constants -----*/
-const suits = ['s', 'c', 'd', 'h']; //probably won't use this
-let ranks = ['02', '03', '04', '05', '06', '07', '08', '09', '10', 'J', 'Q', 'K', 'A'];
-const shuffleBtn = document.querySelector('#shuffle');
+let ranks = ['1', '2', '3', '4', '5', '6'];
+const Users ={
+    '1': 'Player One',
+    '-1': 'Player Two'
+};
+const Players = {
+    name:'One',
+    score: 0,
+    level: 1
+};
 
 
 /*----- state variables: what information does the application need to remember throughout its execution-----*/
 let turn; //1 or -1
 let winner; // 1 or -1 = winner; 'T' = Tie
 
+
 /*----- cached elements -----*/
 const playCardBtn = document.querySelector('#playCard');
-const randomCard = ranks[(Math.floor(Math.random() * ranks.length))];
+let randomNum = ranks[(Math.floor(Math.random() * ranks.length))];
+const shuffleBtn = document.querySelector('#shuffle');
+const messageEl = document.querySelector('h1');
+const oneBtnEl = document.querySelector('#playerOneDeck');
+const twoBtnEl = document.querySelector('#playerTwoDeck');
 
-let Player = {
-    name:'One',
-    score: 0
-}
+
 
 /*----- event listeners -----*/
-shuffleBtn.addEventListener('click', init());
+//does the init go in here?
+shuffleBtn.addEventListener('click',function(){
+    messageEl.innerText = "Let's Play!"
+});
+//is this correct?
+// shuffleBtn.addEventListener('click', init);
 
+oneBtnEl.addEventListener('click', (evt) =>{
+    console.log(evt.target)
+});
+
+twoBtnEl.addEventListener('click', (evt) =>{
+    console.log(evt.target)
+});
 
 //it only generates a random number once.
-playCardBtn.addEventListener('click', function(){
-    console.log(randomCard)
-});
-//
-shuffleBtn.addEventListener('click',function(){
-    document.querySelector('h1').innerText = "Let's Play!"
-});
+// playCardBtn.addEventListener('click', (evt) => {
+//     console.log(evt.target)
+//    })
+
+playCardBtn.addEventListener('click', pickRanNumber);
+oneBtnEl.addEventListener('click', pickRanNumber);
+twoBtnEl.addEventListener('click', pickRanNumber);
 
 /*----- functions -----*/
+//this has to pick a random from the array
+function pickRanNumber() {
+    alert('it worked')
+};
+
+
+
+
+// function PlayerOne(name, score, level){
+//     this.player = Dennelle;
+//     this.score = 0;
+//     this.level = 1;
+// }
+
+// function PlayerTwo(name, score, level){
+//     this.player = Computer;
+//     this.score = 0;
+//     this.level = 1;
+// }
 
 
 init();
@@ -43,7 +83,6 @@ function init(){
 }
 
 function render() {
-
 }
 
 /*----- Things I need
