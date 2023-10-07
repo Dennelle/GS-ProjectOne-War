@@ -50,5 +50,14 @@ footer{
     font-size: 10px;
 }
 
+#number{
+    text-align: center;
+}
 
+#playerOneDeck{
+    text-align: center;
+}
+#playerTwoDeck{
+    text-align: center;
+}
 /* color palette https://coolors.co/ba1200-031927-9dd1f1-508aa8-c8e0f4 */

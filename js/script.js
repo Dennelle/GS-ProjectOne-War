@@ -17,13 +17,19 @@ let winner; // 1 or -1 = winner; 'T' = Tie
 
 
 /*----- cached elements -----*/
-const playCardBtn = document.querySelector('#playCard');
-let randomNum = ranks[(Math.floor(Math.random() * ranks.length))];
 const shuffleBtn = document.querySelector('#shuffle');
 const messageEl = document.querySelector('h1');
 const oneBtnEl = document.querySelector('#playerOneDeck');
 const twoBtnEl = document.querySelector('#playerTwoDeck');
 
+const randonNum = () =>{
+    return ranks[(Math.floor(Math.random() * ranks.length))];
+};
+
+
+
+const playCardBtnEl = document.querySelector('#playCard');
+const numEl = document.querySelector('#number');
 
 
 /*----- event listeners -----*/
@@ -33,33 +39,18 @@ shuffleBtn.addEventListener('click',function(){
 });
 //is this correct?
 // shuffleBtn.addEventListener('click', init);
-
 oneBtnEl.addEventListener('click', (evt) =>{
     console.log(evt.target)
 });
-
 twoBtnEl.addEventListener('click', (evt) =>{
     console.log(evt.target)
 });
 
-//it only generates a random number once.
-// playCardBtn.addEventListener('click', (evt) => {
-//     console.log(evt.target)
-//    })
-
-playCardBtn.addEventListener('click', pickRanNumber);
-oneBtnEl.addEventListener('click', pickRanNumber);
-twoBtnEl.addEventListener('click', pickRanNumber);
+playCardBtnEl.addEventListener('click', () => {
+    numEl.innerHTML = randonNum();
+});
 
 /*----- functions -----*/
-//this has to pick a random from the array
-function pickRanNumber() {
-    alert('it worked')
-};
-
-
-
-
 // function PlayerOne(name, score, level){
 //     this.player = Dennelle;
 //     this.score = 0;
@@ -87,10 +78,9 @@ function render() {
 
 /*----- Things I need
 
-- an event listener for the shuffle/start button
-- an event listener for the play button
-- an object for player and computer
+- an event listener for the shuffle/start button √
+- an event listener for the play button √
+- an object for player and computer √
 - the player should be able to enter their name
 - the player wins if they have the most cards at the end.
-
 -----*/
