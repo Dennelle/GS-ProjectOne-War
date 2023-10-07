@@ -21,16 +21,13 @@ const shuffleBtn = document.querySelector('#shuffle');
 const messageEl = document.querySelector('h1');
 const oneBtnEl = document.querySelector('#playerOneDeck');
 const twoBtnEl = document.querySelector('#playerTwoDeck');
+const playCardBtnEl = document.querySelector('#playCard');
+const num1El = document.querySelector('#number');
+const num2El = document.querySelector('#number2');
 
 const randonNum = () =>{
     return ranks[(Math.floor(Math.random() * ranks.length))];
 };
-
-
-
-const playCardBtnEl = document.querySelector('#playCard');
-const numEl = document.querySelector('#number');
-
 
 /*----- event listeners -----*/
 //does the init go in here?
@@ -39,15 +36,23 @@ shuffleBtn.addEventListener('click',function(){
 });
 //is this correct?
 // shuffleBtn.addEventListener('click', init);
-oneBtnEl.addEventListener('click', (evt) =>{
-    console.log(evt.target)
-});
-twoBtnEl.addEventListener('click', (evt) =>{
-    console.log(evt.target)
-});
+
+// oneBtnEl.addEventListener('click', (evt) =>{
+//     console.log(evt.target)
+// });
+// twoBtnEl.addEventListener('click', (evt) =>{
+//     console.log(evt.target)
+// });
 
 playCardBtnEl.addEventListener('click', () => {
-    numEl.innerHTML = randonNum();
+    num1El.innerHTML = randonNum();
+});
+
+oneBtnEl.addEventListener('click', () => {
+    num1El.innerHTML = randonNum();
+});
+twoBtnEl.addEventListener('click', () => {
+    num2El.innerHTML = randonNum();
 });
 
 /*----- functions -----*/
