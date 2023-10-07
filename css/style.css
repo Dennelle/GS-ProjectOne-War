@@ -11,6 +11,7 @@ body {
     align-items: center;
     background-color: #508AA8;
     color: white;
+    font-family: 'Playfair Display', serif;
 }
 
 header {
@@ -27,14 +28,17 @@ h1{
     flex-direction: column;
     grid-template-columns: 300px 300px;
     justify-content: center;
+    gap: 10%;
 }
 
 #playerOneDeck{
     background-color: #9DD1F1;
+    text-align: center;
 }
 
 #playerTwoDeck{
     background-color: #C8E0F4;
+    text-align: center;
 
 }
 
@@ -42,8 +46,10 @@ h1{
     display: grid;
     height: 25px;
     flex-direction: column;
-    grid-template-columns: 150px 150px;
+    grid-template-columns: 300px 300px;
     grid-column-gap: 20px;
+    justify-content: center;
+    gap: 10%;
 }
 
 footer{
@@ -58,10 +64,4 @@ footer{
     text-align: center;
 }
 
-#playerOneDeck{
-    text-align: center;
-}
-#playerTwoDeck{
-    text-align: center;
-}
 /* color palette https://coolors.co/ba1200-031927-9dd1f1-508aa8-c8e0f4 */

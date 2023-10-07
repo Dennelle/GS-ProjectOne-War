@@ -1,23 +1,27 @@
 /*----- constants -----*/
-let ranks = ['1', '2', '3', '4', '5', '6'];
-const Users ={
+let ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
+let winner; // 1 or -1 = winner; 'T' = Tie
+let turn; //1 or -1
+
+
+const Player ={
     '1': 'Player One',
     '-1': 'Player Two'
 };
-const Players = {
-    name:'One',
-    score: 0,
-    level: 1
-};
+// can I do this?
+// const Players = {
+//     name:'One',
+//     score: 0,
+//     level: 1
+// };
 
 
 /*----- state variables: what information does the application need to remember throughout its execution-----*/
-let turn; //1 or -1
-let winner; // 1 or -1 = winner; 'T' = Tie
-
+turn = 1
+winner = null
 
 /*----- cached elements -----*/
-const shuffleBtn = document.querySelector('#shuffle');
+const startBtn = document.querySelector('#start');
 const messageEl = document.querySelector('h1');
 const oneBtnEl = document.querySelector('#playerOneDeck');
 const twoBtnEl = document.querySelector('#playerTwoDeck');
@@ -31,11 +35,11 @@ const randonNum = () =>{
 
 /*----- event listeners -----*/
 //does the init go in here?
-shuffleBtn.addEventListener('click',function(){
+startBtn.addEventListener('click',function(){
     messageEl.innerText = "Let's Play!"
 });
 //is this correct?
-// shuffleBtn.addEventListener('click', init);
+// startBtn.addEventListener('click', init);
 
 // oneBtnEl.addEventListener('click', (evt) =>{
 //     console.log(evt.target)
@@ -44,9 +48,10 @@ shuffleBtn.addEventListener('click',function(){
 //     console.log(evt.target)
 // });
 
-playCardBtnEl.addEventListener('click', () => {
-    num1El.innerHTML = randonNum();
-});
+//this is for one player v. computer
+// playCardBtnEl.addEventListener('click', () => {
+//     num1El.innerHTML = randonNum();
+// });
 
 oneBtnEl.addEventListener('click', () => {
     num1El.innerHTML = randonNum();
@@ -69,7 +74,13 @@ twoBtnEl.addEventListener('click', () => {
 // }
 
 
+//the starting value of the turn is 1. 1 times a negative flips the value then it runs the click event aain with render()
+turn = turn * -1
+render()
+
+
 init();
+
 
 // initialize all state, then call render()
 function init(){
@@ -83,7 +94,7 @@ function render() {
 
 /*----- Things I need
 
-- an event listener for the shuffle/start button √
+- an event listener for the start button √
 - an event listener for the play button √
 - an object for player and computer √
 - the player should be able to enter their name
