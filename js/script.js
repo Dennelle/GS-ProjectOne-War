@@ -6,7 +6,8 @@ const ranks = ['02', '03', '04', '05', '06', '07', '08', '09', '10', 'J', 'Q', '
 /*----- state variables: what information does the application need to remember throughout its execution-----*/
 let playerOneDeck = []
 let playerTwoDeck = []
-let score;
+let playerOneScore = 0;
+let playerTwoScore = 0;
 
 /*----- cached elements -----*/
 const shuffleEl = document.querySelector('#shuffle');
@@ -26,107 +27,89 @@ const shuffledContainer = document.getElementById('shuffled-deck-container');
 const playCard = document.querySelector(".playCard");
 
 /*----- functions -----*/
-    function buildOriginalDeck()
-    {
+function buildOriginalDeck() {
     // Use nested forEach to generate card objects
-        suits.forEach(function(suit)
-    {
-        ranks.forEach(function(rank)
-    {
-        deck.push
-    (
-    {
-    // The 'face' property maps to the library's CSS classes for cards
-    face: `${suit}${rank}`,
-    value: Number(rank) || (rank === 'A' ? 11 : 10)
-    }
-    );
-    } );
-    } );
+    suits.forEach(function (suit) {
+        ranks.forEach(function (rank) {
+            deck.push
+                (
+                    {
+                        // The 'face' property maps to the library's CSS classes for cards
+                        face: `${suit}${rank}`,
+                        value: Number(rank) || (rank === 'A' ? 11 : 10)
+                    }
+                );
+        });
+    });
     return deck;
-    }
+}
 
-    function shuffleCards(arr)
-    {
-    return arr.sort( () => Math.random() - 0.5 );
-    }
+function shuffleCards(arr) {
+    return arr.sort(() => Math.random() - 0.5);
+}
 
-    function divideDeck()
-    {
-    playerOneDeck = deck.slice(0,26);
+function divideDeck() {
+    playerOneDeck = deck.slice(0, 26);
     console.log(playerOneDeck);
 
-    playerTwoDeck = deck.slice(26,52);
+    playerTwoDeck = deck.slice(26, 52);
     console.log(playerTwoDeck);
-    }
+}
 
-    function compareHands()
-    {
-    //add the brackets
-    if (playerOneDeck[i].value > playerTwoDeck[i].value)
-    console.log (' Player One Wins!')
-    else if
-    (playerOneDeck[i].value < playerTwoDeck[i].value)
-    console.log (' Player Two Wins!')
-    else if
-    (playerOneDeck[i].value === playerTwoDeck[i].value)
-    console.log ('Peace Treaty Now')
+function compareHands() {
+    if (playerOneDeck[i].value > playerTwoDeck[i].value) {
+        playerOneScore = playerOneScore + 2
+        playerOneNum.innerHTML = playerOneScore
+        console.log(' Player One Wins!')
     }
+    else if (playerOneDeck[i].value < playerTwoDeck[i].value) {
+        playerTwoScore = playerTwoScore + 2
+        playerTwoNum.innerHTML = playerTwoScore
+        console.log(' Player Two Wins!')
+    }
+    else if
+        (playerOneDeck[i].value === playerTwoDeck[i].value) {
+        console.log('Peace Treaty Now')
+    }
+}
 
 /*----- event listeners -----*/
-    shuffleEl.addEventListener('click', () => {
+shuffleEl.addEventListener('click', () => {
     shuffleCards(deck)
     console.log(shuffleCards(deck))
-    });
+});
 
-    dealCardsBtnEl.addEventListener('click', () => {
+dealCardsBtnEl.addEventListener('click', () => {
     divideDeck()
-    });
+});
 
-    playOneBtnEl.addEventListener('click', () => {
+playOneBtnEl.addEventListener('click', () => {
+    console.log(i)
+    if (i >= 26){
+        console.log(`The winner is $()`)
+        return;
+    }
     compareHands()
-    i += 1; i < 28;
-    });
-
-
+    i += 1;
+});
 
 
 // initialize all state, then call render()
-
-
-render()
-
-
-
-
 init();
-
-
-
 
 
 
 function init(){
 
 
-render();
+
+    render();
 }
 
 
 function render() {
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 function render() {
