@@ -56,32 +56,48 @@ const playCard = document.querySelector(".playCard");
     function divideDeck()
     {
     playerOneDeck = deck.slice(0,26);
-    playerOneDeck.push
     console.log(playerOneDeck);
 
     playerTwoDeck = deck.slice(26,52);
-    playerTwoDeck.push
     console.log(playerTwoDeck);
     }
-//     {
-//     if (playerOneDeck[0].value > playerTwoDeck[0].value)
-//         console.log (' Player One Wins!')
-//     else if
-//          (playerOneDeck[0].value < playerTwoDeck[0].value)
-//       console.log (' Player Two Wins!')
-//     else ('It\'s a tie!')
-//     }
+
+
+    // function compareHands()
+    // {
+    // if (playerOneDeck[0].value > playerTwoDeck[0].value)
+    //     console.log (' Player One Wins!')
+    // else if
+    //     (playerOneDeck[0].value < playerTwoDeck[0].value)
+    //   console.log (' Player Two Wins!')
+    // else
+    //     ('It\'s a tie!')
+    // }
+
 
     function compareHands()
     {
-    if (playerOneDeck[0].value > playerTwoDeck[0].value)
+    // if (playerOneDeck[0].value > playerTwoDeck[0].value)
+    //     console.log (' Player One Wins!')
+    // else if
+    //     (playerOneDeck[0].value < playerTwoDeck[0].value)
+    //   console.log (' Player Two Wins!')
+    // else
+    //     ('It\'s a tie!')
+
+    let i = 0;
+    while (i < playerTwoDeck.length) {
+        if (playerOneDeck[i].value > playerTwoDeck[i].value)
         console.log (' Player One Wins!')
-    else if
-        (playerOneDeck[0].value < playerTwoDeck[0].value)
-      console.log (' Player Two Wins!')
-    else
+        else if
+        (playerOneDeck[i].value < playerTwoDeck[i].value)
+        console.log (' Player Two Wins!')
+         else
         ('It\'s a tie!')
+        i++;
     }
+    }
+
 
 /*----- event listeners -----*/
 shuffleEl.addEventListener('click', () => {
