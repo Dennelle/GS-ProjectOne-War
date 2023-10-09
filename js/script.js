@@ -3,11 +3,6 @@ const deck = [];
 const suits = ['s', 'c', 'd', 'h'];
 const ranks = ['02', '03', '04', '05', '06', '07', '08', '09', '10', 'J', 'Q', 'K', 'A'];
 
-
-
-
-
-
 /*----- state variables: what information does the application need to remember throughout its execution-----*/
 let playerOneDeck = []
 let playerTwoDeck = []
@@ -40,7 +35,7 @@ const playCard = document.querySelector(".playCard");
     {
         deck.push
     (
-        {
+    {
     // The 'face' property maps to the library's CSS classes for cards
     face: `${suit}${rank}`,
     value: Number(rank) || (rank === 'A' ? 11 : 10)
@@ -73,8 +68,9 @@ const playCard = document.querySelector(".playCard");
     else if
     (playerOneDeck[i].value < playerTwoDeck[i].value)
     console.log (' Player Two Wins!')
-    else
-    ('It\'s a tie!')
+    else if
+    (playerOneDeck[i].value === playerTwoDeck[i].value)
+    console.log ('Peace Treaty Now')
     }
 
 /*----- event listeners -----*/
@@ -89,7 +85,7 @@ const playCard = document.querySelector(".playCard");
 
     playOneBtnEl.addEventListener('click', () => {
     compareHands()
-    i += 1; i < 27;
+    i += 1; i < 28;
     });
 
 
