@@ -27,13 +27,31 @@
   /* Not a card, but a card-shaped outline to represent a
      droppable place, like an empty pile. */ }
   .card.small {
-    font-size: 12px; }
+    font-size: 12px; }Gameplay
+    Place the cards on the table, face down. Players are not allowed to peek at their playing cards as they play war. Your opponent should also be unable to view your cards. You may also hold them out in front of you, fanned out.
+
+    Count to three before flipping a card. Simultaneously, each player must count down and flip a card. You should only reverse your topmost card in your deck.
+
+    Compare your cards to find which one is the best. The person with the highest card wins the round and keeps both cards in hand.
+
+    When the cards you flip are the same, go to ‘War.’ However, it is not the suit of the card that is important; it is the card’s value that is important. A war can be started by two jacks, two or more tens, or even two aces. For example, suppose you both flip your cards, and each of you gets a ‘6.’ The moment has come to go to battle.
+
+    To declare war, each player must place three more face-down cards on the table. Reverse your fourth card as you would when not at ‘War.’ Whoever holds the higher fourth card at the end of the round receives all ten cards. Suppose a player does not have enough cards to play the war; they must face up their final card. This is the card that will be used to play the war.
   .card.large {
     font-size: 26px; }
   .card.xlarge {
     font-size: 42px; }
   .card.no-border {
-    border: 0; }
+    border: 0; }Gameplay
+    Place the cards on the table, face down. Players are not allowed to peek at their playing cards as they play war. Your opponent should also be unable to view your cards. You may also hold them out in front of you, fanned out.
+
+    Count to three before flipping a card. Simultaneously, each player must count down and flip a card. You should only reverse your topmost card in your deck.
+
+    Compare your cards to find which one is the best. The person with the highest card wins the round and keeps both cards in hand.
+
+    When the cards you flip are the same, go to ‘War.’ However, it is not the suit of the card that is important; it is the card’s value that is important. A war can be started by two jacks, two or more tens, or even two aces. For example, suppose you both flip your cards, and each of you gets a ‘6.’ The moment has come to go to battle.
+
+    To declare war, each player must place three more face-down cards on the table. Reverse your fourth card as you would when not at ‘War.’ Whoever holds the higher fourth card at the end of the round receives all ten cards. Suppose a player does not have enough cards to play the war; they must face up their final card. This is the card that will be used to play the war.
   .card.shadow {
     box-shadow: 2px 2px 3px 0 rgba(41, 41, 41, 0.75); }
   .card.outline {
