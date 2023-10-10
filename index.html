@@ -7,12 +7,13 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
     <link href="css/card-library/css/cardstarter.css" rel="stylesheet" type="text/css" />
     <title>TREATYbyDennelle</title>
     <h1>TREATY</h1>
-    <h2>Welcome Player</h2>
-    <nav id="nav-bar">
+    <h2>WELCOME</h2>
+    <container class="container">
+    <nav id="nav">
         <ul>
             <button id='shuffle'>Shuffle Cards</button>
             <button id='dealCards'>Deal Cards</button>
@@ -24,25 +25,28 @@
 <body>
 
     <section>
-        <!-- <p class='introduction'>Win by collecting the most cards.</p> -->
-        <!-- <p id="instructions"> The card rankings, from highest to lowest, in Treaty are as follows: A or Ace,  K or King, Q or Queen, J or Jack,  and all the numbers from the descending order, i.e., Ten, Nine, Eight, Seven, Six, Five, Four, Three and Two. Nothing beats an Ace, and no other card can beat a 2.</p>
-    </section> -->
-
-    <!-- </p>
-    <button id='shuffle'>Shuffle Cards</button>
-    <button id='dealCards'>Deal Cards</button>
-    <button id='playButton'> play </button>
-    <p class='explanation'> Press the Shuffle Cards button to shuffle deck. Press the deal cards button to get your cards to play. -->
-
 <!-- GameBoard -->
     <section id='board'>
-        <div>Score<h3 id='number1'>0</h3></div>
+        <div>Player 1 Score<h2 id='number1'>0</h2></div>
+        <div>Player 2 Score<h2 id='number2'>0</h2></div>
+    </section>
+    <section>
         <div id='playerOneDeck'>
         </div>
-        <div>Score<h3 id='number2'>0</h3></div>
         <div id='playerTwoDeck'>
         </div>
     </section>
+    </container>
+
     <footer>Created by Dennelle 2023</footer>
 </body>
 </html>
+
+  <!-- <section id='board'>
+        <div>Player 1 Score<h2 id='number1'>0</h2></div>
+        <div id='playerOneDeck'>
+        </div>
+        <div>Player 2 Score<h2 id='number2'>0</h2></div>
+        <div id='playerTwoDeck'>
+        </div>
+    </section>
