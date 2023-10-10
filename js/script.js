@@ -13,13 +13,13 @@ let playerTwoScore = 0;
 
 /*----- cached elements -----*/
 const shuffleEl = document.querySelector('#shuffle');
-const messageEl = document.querySelector('h1');
+const messageEl = document.querySelector('h2');
 const dealCardsBtnEl = document.querySelector('#dealCards');
 const num1El = document.querySelector('#number1');
 const num2El = document.querySelector('#number2');
 const playerOneNum = document.querySelector('#number1')
 const playerTwoNum = document.querySelector('#number2')
-const playOneBtnEl = document.querySelector('#playButtonOne')
+const playBtnEl = document.querySelector('#playButton')
 const playTwoBtnEl = document.querySelector('#playButtonTwo')
 let playerDeckEl = document.querySelector('#playerOneDeck')
 let i = 0
@@ -80,13 +80,16 @@ function compareHands() {
 const whoWon = function() {
     if (playerOneScore > playerTwoScore) {
         messageEl.innerHTML = 'Player One Won!'
+        messageEl.style.backgroundColor = '#FF0099'
     }
     else if (playerOneScore < playerTwoScore) {
         messageEl.innerHTML = 'Player Two Won, You Lose'
+        messageEl.style.backgroundColor = '#FF0000'
     }
     else if
         (playerOneScore === playerTwoScore) {
         messageEl.innerHTML = 'A Tie'
+        messageEl.style.backgroundColor = '#6E0DD0'
     }
 }
 
@@ -100,7 +103,7 @@ dealCardsBtnEl.addEventListener('click', () => {
     divideDeck()
 });
 
-playOneBtnEl.addEventListener('click', () => {
+playBtnEl.addEventListener('click', () => {
     console.log(i)
     if (i >= 26){
         return whoWon();
@@ -109,12 +112,6 @@ playOneBtnEl.addEventListener('click', () => {
     i += 1;
     // return whoWon()
 });
-
-
-
-
-
-
 
 // initialize all state, then call render()
 
