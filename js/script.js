@@ -15,8 +15,8 @@ let playerTwoScore = 0;
 const shuffleEl = document.querySelector('#shuffle');
 const messageEl = document.querySelector('h2');
 const dealCardsBtnEl = document.querySelector('#dealCards');
-const num1El = document.querySelector('#number1');
-const num2El = document.querySelector('#number2');
+// const num1El = document.querySelector('#number1');
+// const num2El = document.querySelector('#number2');
 const playerOneNum = document.querySelector('#number1')
 const playerTwoNum = document.querySelector('#number2')
 const playBtnEl = document.querySelector('#playButton')
@@ -83,11 +83,11 @@ function compareHands() {
 const whoWon = function() {
     if (playerOneScore > playerTwoScore) {
         messageEl.innerHTML = 'Player One Won!'
-        messageEl.style.backgroundColor = '#FF0099'
+        messageEl.style.backgroundColor = '#2bd1fc'
     }
     else if (playerOneScore < playerTwoScore) {
         messageEl.innerHTML = 'Player Two Won, You Lose'
-        messageEl.style.backgroundColor = '#FF0000'
+        messageEl.style.backgroundColor = '#f3ea5f'
     }
     else if
         (playerOneScore === playerTwoScore) {
@@ -109,7 +109,7 @@ dealCardsBtnEl.addEventListener('click', () => {
 playBtnEl.addEventListener('click', () => {
     console.log(i)
     if (i >= 26){
-        return whoWon();
+    return whoWon();
     }
     compareHands()
     i += 1;
@@ -129,6 +129,11 @@ resetBtnEl.addEventListener('click', render)
     i = 0
     playerOneScore = 0
     playerTwoScore = 0
+    playerTwoNum.innerHTML = "0"
+    playerOneNum.innerHTML = "0"
+    messageEl.innerHTML = "Click Shuffle Cards"
+    messageEl.style.backgroundColor = "rgb(31,81,255)"
+
     console.log('the reset button clicks')
     }
  }
