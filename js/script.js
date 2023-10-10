@@ -24,11 +24,6 @@ let playerDeckEl = document.querySelector('#playerOneDeck')
 let resetBtnEl = document.querySelector('#reset')
 let i = 0
 
-// Build an 'original' deck of 'card' objects used to create shuffled decks
-
-// const shuffledContainer = document.getElementById('shuffled-deck-container');
-// const playCard = document.querySelector(".playCard");
-
 /*----- functions -----*/
 function buildOriginalDeck() {
     // Use nested forEach to generate card objects
@@ -99,11 +94,13 @@ const whoWon = function() {
 /*----- event listeners -----*/
 shuffleEl.addEventListener('click', () => {
     shuffleCards(deck)
+    messageEl.innerHTML = "Click Deal Cards"
     console.log(shuffleCards(deck))
 });
 
 dealCardsBtnEl.addEventListener('click', () => {
     divideDeck()
+    messageEl.innerHTML = "Click Play"
 });
 
 playBtnEl.addEventListener('click', () => {

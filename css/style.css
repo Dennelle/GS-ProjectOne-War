@@ -6,7 +6,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    display: grid;
+    /* display: inline; */
     justify-content: center;
     background-color: white;
     color: black;
@@ -54,37 +54,37 @@ h2{
 
 }
 
-#board {
-    display: grid;
-    height: 600px;
-    grid-template-columns: 150px 150px;
+section{
+    display: flex;
     justify-content: center;
-    gap: 5%;
+
 }
 
-#playerOneDeck{
-    background-color: transparent;
+#board {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 300px;
+    grid-template-columns: 60px 150px 60px 150px;
+    /* grid-template-rows: 10px 10px 10px 10px; */
+    gap: 1%;
+}
+
+/* #playerOneDeck{
+    background-color: black;
     text-align: center;
+    grid-template-columns: 600px;
 }
 
 #playerTwoDeck{
-    background-color: transparent;
+    background-color: black;
     text-align: center;
 
-}
-
-.controls{
-    display: grid;
-    height: 25px;
-    flex-direction: column;
-    grid-template-columns: 300px 300px;
-    grid-column-gap: 20px;
-    justify-content: center;
-    gap: 10%;
-}
+} */
 
 footer{
-    font-size: 10px;
+    font-size: 5px;
 }
 
 #number{
