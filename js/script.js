@@ -20,8 +20,8 @@ const num2El = document.querySelector('#number2');
 const playerOneNum = document.querySelector('#number1')
 const playerTwoNum = document.querySelector('#number2')
 const playBtnEl = document.querySelector('#playButton')
-const playTwoBtnEl = document.querySelector('#playButtonTwo')
 let playerDeckEl = document.querySelector('#playerOneDeck')
+let resetBtnEl = document.querySelector('#reset')
 let i = 0
 
 // Build an 'original' deck of 'card' objects used to create shuffled decks
@@ -48,10 +48,13 @@ function buildOriginalDeck() {
     return deck;
 }
 
-function shuffleCards(arr) {
+// function shuffleCards(arr) {
+//     return arr.sort(() => Math.random() - 0.5);
+// }
+
+const shuffleCards = function(arr) {
     return arr.sort(() => Math.random() - 0.5);
 }
-
 function divideDeck() {
     playerOneDeck = deck.slice(0, 26);
     console.log(playerOneDeck);
@@ -113,24 +116,24 @@ playBtnEl.addEventListener('click', () => {
     // return whoWon()
 });
 
+resetBtnEl.addEventListener('click', render)
+
 // initialize all state, then call render()
 
-init();
+ // experimental code starts here
 
+ init()
 
+ function render(){
+    if (i === 26) {
+    i = 0
+    playerOneScore = 0
+    playerTwoScore = 0
+    console.log('the reset button clicks')
+    }
+ }
 
-function init(){
+ function init(){
 
-
-
-    render();
-}
-
-
-function render() {
-
-}
-
-
-function render() {
-}
+ render()
+ }
