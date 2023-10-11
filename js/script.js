@@ -90,6 +90,7 @@ function compareHands() {
         (playerOneDeck[i].value === playerTwoDeck[i].value) {
         console.log('Peace Treaty Now')
     }
+    renderCards(playerOneDeck[i], playerTwoDeck[i])
 }
 //changed to a declaration
 // const whoWon = function () {
@@ -124,10 +125,12 @@ function whoWon() {
     }
 }
 
-function renderCards() {
-    playerOneDeckEl.classList.add("back-red");
-    playerTwoDeckEl.classList.add("back-red");
+function renderCards(oneCard, twoCard) {
+    playerOneDeckEl.classList.add(oneCard.face);
+    playerTwoDeckEl.classList.add(twoCard.face);
 
+    console.log(oneCard)
+    console.log(twoCard)
 }
 //new card deck code
 function handleClick() {
@@ -159,7 +162,7 @@ playBtnEl.addEventListener('click', () => {
     }
     compareHands()
     i += 1;
-    renderCards();
+    // renderCards();
 });
 
 resetBtnEl.addEventListener('click', render)
