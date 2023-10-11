@@ -65,10 +65,12 @@ footer{
     font-size: 5px;
 }
 
-/* #number{
-    text-align: center;
-}
-
-#number2{
-    text-align: center;
-} */
+button {
+    display:inline;
+    width: 100px;
+    color: 	#2bd1fc;
+    background-color: white;
+    border-color: whitesmoke;
+    border: 1px solid #ff48c4;
+    box-shadow: 5px 5px 5px #000;
+    }
