@@ -1,6 +1,6 @@
 # GS-ProjectOne-War
 
-#H1 Peace
+# H1 Peace
 
 Peace by Dennelle is based on the classic War Game with a positive twist.
 
