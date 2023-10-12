@@ -99,7 +99,7 @@ function compareHands() {
 
 function whoWon() {
     if (playerOneScore > playerTwoScore) {
-        messageEl.innerHTML = 'You Won. Peace Has Been Restored.'
+        messageEl.innerHTML = 'You Won. Peace Has Been Restored.';
         // messageEl.style.backgroundColor = '#2bd1fc'
     }
     else if (playerOneScore < playerTwoScore) {
@@ -134,6 +134,7 @@ backDeckOneEl.addEventListener('click', () => {
     }
     compareHands();
     i += 1;
+    myAudio.play();
 });
 
 resetBtnEl.addEventListener('click', render)
@@ -146,7 +147,7 @@ function render() {
         playerTwoScore = 0
         playerTwoNum.innerHTML = "0"
         playerOneNum.innerHTML = "0"
-        bodyEl.style.backgroundColor = ""
+        bodyEl.style.background = ""
         bodyEl.style.color = ""
         h1El.innerHTML = "PEACE"
     }

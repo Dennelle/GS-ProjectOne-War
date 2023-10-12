@@ -61,6 +61,10 @@ button {
     visibility: hidden;
 }
 
+#audio2{
+  visibility: hidden;
+}
+
 button:hover {
     background-color: rgb(139, 0, 0);
 }
