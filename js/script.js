@@ -4,14 +4,12 @@ const suits = ['s', 'c', 'd', 'h'];
 const ranks = ['02', '03', '04', '05', '06', '07', '08', '09', '10', 'J', 'Q', 'K', 'A'];
 const originalDeck = buildOriginalDeck();
 
-
 /*----- state variables: what information does the application need to remember throughout its execution-----*/
 let playerOneDeck = []
 let playerTwoDeck = []
 let playerOneScore = 0;
 let playerTwoScore = 0;
 let currentClassNames = { p1: "", p2: "" }
-
 
 /*----- cached elements -----*/
 const shuffleEl = document.querySelector('#shuffle');
@@ -22,12 +20,12 @@ const playerOneNum = document.querySelector('#number1')
 const playerTwoNum = document.querySelector('#number2')
 const playBtnEl = document.querySelector('#playButton')
 let resetBtnEl = document.querySelector('#reset')
-let i = 0
 let playerOneDeckEl = document.querySelector('#playerOneDeck')
 let playerTwoDeckEl = document.querySelector('#playerTwoDeck')
 const bodyEl = document.querySelector("body")
 let backDeckOneEl = document.querySelector('#playerOneBackDeck')
 let myAudio = document.querySelector('#audio')
+let i = 0
 myAudio.play()
 
 /*----- functions -----*/
