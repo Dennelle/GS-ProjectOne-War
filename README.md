@@ -6,7 +6,7 @@ The object of the game is to keep your peace by drawing a higher card than the 2
 
 Link to Game https://dennelle.github.io/GS-ProjectOne-War/ [https://dennelle.github.io/GS-ProjectOne-War/](url)
 
-Wire Frame: [https://www.figma.com/file/D4C8UZgiIMefZSZIl5XD7A/Treaty?type=design&node-id=0-1&mode=design&t=4OAEFwztGvY9pmk6-0](url)
+Figma Wire Frame: [https://www.figma.com/file/D4C8UZgiIMefZSZIl5XD7A/Treaty?type=design&node-id=0-1&mode=design&t=4OAEFwztGvY9pmk6-0](url)
 
 Images of Game:
 
