@@ -30,7 +30,6 @@ let backDeckOneEl = document.querySelector('#playerOneBackDeck')
 let myAudio = document.querySelector('#audio')
 myAudio.play()
 
-
 /*----- functions -----*/
 function buildOriginalDeck() {
     // Use nested forEach to generate card objects
@@ -50,28 +49,24 @@ function buildOriginalDeck() {
     return deck;
 }
 
-
 function shuffleCards(arr) {
     return arr.sort(() => Math.random() - 0.5);
 }
-
 
 function divideDeck() {
     playerOneDeck = deck.slice(0, 26);
     // console.log(playerOneDeck);
 
-
     playerTwoDeck = deck.slice(26, 52);
     // console.log(playerTwoDeck);
 }
-
 
 function compareHands() {
     if (playerOneDeck[i].value > playerTwoDeck[i].value) {
         playerOneScore = playerOneScore + 2
         messageEl.innerHTML = 'You Have Maintained Your Peace, 2 Points Awarded'
         playerOneNum.innerHTML = playerOneScore
-        bodyEl.style.backgroundColor = ""
+        bodyEl.style.background = ""
         bodyEl.style.color = ""
         h1El.innerHTML = "PEACE"
         console.log('Player One Won')
@@ -80,14 +75,14 @@ function compareHands() {
         playerTwoScore = playerTwoScore + 2
         messageEl.innerHTML = 'Player Two Has Taken Your Peace, 2 Points Awarded'
         playerTwoNum.innerHTML = playerTwoScore
-        bodyEl.style.backgroundColor = ""
+        bodyEl.style.background = ""
         bodyEl.style.color = ""
         h1El.innerHTML = "PEACE"
         console.log('Player Two One')
     }
     if
         (playerOneDeck[i].value === playerTwoDeck[i].value) {
-        bodyEl.style.backgroundColor = "black"
+        bodyEl.style.background = "black"
         bodyEl.style.color = "red"
         messageEl.innerHTML = 'War Started'
         h1El.innerHTML = 'WAR'
@@ -101,7 +96,6 @@ function compareHands() {
     console.log(playerOneDeck[i], playerTwoDeck[i])
     renderCards(playerOneDeck[i], playerTwoDeck[i])
 }
-
 
 function whoWon() {
     if (playerOneScore > playerTwoScore) {
@@ -119,7 +113,6 @@ function whoWon() {
     }
 }
 
-
 function renderCards(oneCard, twoCard) {
     if (currentClassNames.p1 && currentClassNames.p2) {
         playerOneDeckEl.classList.remove(currentClassNames.p1);
@@ -132,7 +125,6 @@ function renderCards(oneCard, twoCard) {
     currentClassNames.p2 = twoCard.face
 }
 
-
 /*----- event listeners -----*/
 backDeckOneEl.addEventListener('click', () => {
     shuffleCards(deck);
@@ -144,10 +136,8 @@ backDeckOneEl.addEventListener('click', () => {
     i += 1;
 });
 
-
 resetBtnEl.addEventListener('click', render)
 // initialize all state, then call render()
-
 
 function render() {
     if (i === 26) {
