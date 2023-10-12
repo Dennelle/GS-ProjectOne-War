@@ -146,11 +146,8 @@ function render() {
         bodyEl.style.backgroundColor = ""
         bodyEl.style.color = ""
         h1El.innerHTML = "PEACE"
-        // messageEl.innerHTML = "Click Card to Play"
-        // messageEl.style.backgroundColor = "rgb(31,81,255)"
+        myAudio.play()
     }
 
     console.log('the reset button clicks')
 }
-
-myAudio.play()
