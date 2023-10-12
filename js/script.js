@@ -119,13 +119,13 @@ function compareHands() {
 }
 
 //     function warScenario() {
-//     if (playerOneDeck[i].value > playerTwoDeck[i].value) {
+//     if (playerOneDeck[3].value > playerTwoDeck[3].value) {
 //         playerOneScore = playerOneScore - 4
 //         playerOneNum.innerHTML = playerOneScore
 //         messageEl.innerHTML = 'Player One loses 4 points!'
 //         console.log(' Player One Wins!')
 //     }
-//     else (playerOneDeck[i].value < playerTwoDeck[i].value)
+//     else (playerOneDeck[3].value < playerTwoDeck[3].value)
 //         playerTwoScore = playerTwoScore - 4
 //         playerTwoNum.innerHTML = playerTwoScore
 //         messageEl.innerHTML = 'Player Two loses 4 points!'
