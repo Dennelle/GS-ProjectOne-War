@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +12,7 @@
     <link href="css/card-library/css/cardstarter.css" rel="stylesheet" type="text/css" />
     <title>TREATYbyDennelle</title>
     <h1>TREATY</h1>
-    <h2>WELCOME</h2>
-    <div>
-        <button id="reset">READY TO PLAY</button>
-        </div>
+    <h2>COLLECT THE MOST CARDS TO WIN</h2>
     <!-- <nav id="nav">
         <ul>
             <button id='shuffle'>Shuffle Cards</button>
@@ -24,15 +22,23 @@
         </ul>
     </nav> -->
 </head>
+
 <body>
-<!-- GameBoard -->
+    <!-- GameBoard -->
     <section id='board'>
-        <div>Player 1 Score<h2 id='number1'>0</h2></div>
-        <div class="card large back-red shadow"id='playerOneBackDeck'>Back of card</div>
+        <div>Player 1 Score<h2 id='number1'>0</h2>
+        </div>
+        <div class="card large back-red shadow" id='playerOneBackDeck'></div>
         <div class="card large outline" id='playerOneDeck'> 1st Player Deck</div>
         <div class="card large outline" id='playerTwoDeck'> 2nd Player Deck</div>
-        <div class="card large back-red shadow" id='playerTwoBackDeck'>Back of card</div>
-        <div>Player 2 Score<h2 id='number2'>0</h2></div>
+        <div class="card large back-red shadow" id='playerTwoBackDeck'></div>
+        <div>Player 2 Score<h2 id='number2'>0</h2>
+        </div>
+    </section>
+    <button id="reset">RESET</button>
+    <p>Each player turns up a card at the same time and the player with the higher card takes both cards and gets two points.If the cards are the same rank, you have entered a WAR and the player with the highest rank loses four points. Can you keep the peace?</p>
 
+    <footer>a game of peace</footer>
 </body>
+
 </html>
