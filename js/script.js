@@ -128,7 +128,6 @@ function compareHands() {
 }
 
 function whoWon() {
-<<<<<<< HEAD
     if (playerOneScore > playerTwoScore) {
         messageEl.innerHTML = 'You Won. Peace Has Been Restored.'
         // messageEl.style.backgroundColor = '#2bd1fc'
@@ -140,26 +139,6 @@ function whoWon() {
     else if
         (playerOneScore === playerTwoScore) {
         messageEl.innerHTML = 'No Winner. Try Again.'
-=======
-    if (playerOneScore > playerTwoScore && playerOneScore > playerThreeScore && playerOneScore > playerFourScore) {
-        messageEl.innerHTML = 'You Won! Peace Has Been Restored!'
-        // messageEl.style.backgroundColor = '#2bd1fc'
-    }
-    else if (playerTwoScore > playerOneScore && playerTwoScore > playerThreeScore && playerTwoScore > playerFourScore) {
-        messageEl.innerHTML = 'Player Two Stole Your Peace. You Lose!'
-        // messageEl.style.backgroundColor = '#f3ea5f'
-    }
-    else if (playerThreeScore > playerTwoScore && playerThreeScore > playerOneScore && playerOneScore > playerFourScore) {
-        messageEl.innerHTML = 'Player Two Stole Your Peace. You Lose!'
-        // messageEl.style.backgroundColor = '#f3ea5f'
-    }
-    else if (playerFourScore > playerTwoScore && playerFourScore > playerThreeScore && playerFourScore > playerOneScore) {
-        messageEl.innerHTML = 'Player Two Stole Your Peace. You Lose!'
-        // messageEl.style.backgroundColor = '#f3ea5f'
-    }
-    else {
-        messageEl.innerHTML = 'No Winner. Try Again!'
->>>>>>> 92820c78d068bb91d275002568ee29b709413fe6
         // messageEl.style.backgroundColor = '#6E0DD0'
     }
 }
@@ -218,5 +197,3 @@ function render() {
 
     console.log('the reset button clicks')
 }
-
-
