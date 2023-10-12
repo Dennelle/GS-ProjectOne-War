@@ -1,43 +1,40 @@
 * {
     box-sizing: border-box;
-    font-family:'MedievalSharp', cursive, serif;
+    font-family: 'MedievalSharp', cursive, serif;
     align-items: center;
     text-align: center;
-
-
 }
 
-#board{
+#board {
     display: flex;
-    justify-content: center;
-  }
-
-#reset{
+    margin: auto;
     justify-content: center;
 }
 
-footer{
+#reset {
+    justify-content: center;
+}
+
+footer {
     display: flex;
     flex-direction: column;
-  }
+    border: 2px solid white;
+}
 
-  p{
+p {
     text-align: center;
 
-  }
+}
 
-  button {
+button {
     font-family: 'Arial', sans-serif;
     font-size: 16px;
     color: white;
     text-align: center;
-
     background-color: red;
-
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
-
     cursor: pointer;
 }
 

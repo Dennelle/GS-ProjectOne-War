@@ -9,11 +9,7 @@ let playerOneDeck = []
 let playerTwoDeck = []
 let playerOneScore = 0;
 let playerTwoScore = 0;
-
 let currentClassNames = { p1: "", p2: "" }
-// use this to switch to War
-let war = true;
-
 
 /*----- cached elements -----*/
 const shuffleEl = document.querySelector('#shuffle');
@@ -28,8 +24,6 @@ let i = 0
 let playerOneDeckEl = document.querySelector('#playerOneDeck')
 let playerTwoDeckEl = document.querySelector('#playerTwoDeck')
 const bodyEl = document.querySelector("body")
-
-//new card deck code
 let backDeckOneEl = document.querySelector('#playerOneBackDeck')
 
 /*----- functions -----*/
@@ -62,89 +56,55 @@ function divideDeck() {
     playerTwoDeck = deck.slice(26, 52);
     // console.log(playerTwoDeck);
 }
-//no peace treaty game
-// function compareHands() {
-//     if (playerOneDeck[i].value > playerTwoDeck[i].value) {
-//         playerOneScore = playerOneScore + 2
-//         playerOneNum.innerHTML = playerOneScore
-//         console.log(' Player One Wins!')
-//     }
-//     else if (playerOneDeck[i].value < playerTwoDeck[i].value) {
-//         playerTwoScore = playerTwoScore + 2
-//         playerTwoNum.innerHTML = playerTwoScore
-//         console.log(' Player Two Wins!')
-//     }
-//     else if
-//         (playerOneDeck[i].value === playerTwoDeck[i].value) {
-//         console.log('Peace Treaty Now')
-//     }
-//     renderCards(playerOneDeck[i], playerTwoDeck[i])
-// }
 
 function compareHands() {
     if (playerOneDeck[i].value > playerTwoDeck[i].value) {
         playerOneScore = playerOneScore + 2
-        messageEl.innerHTML = 'Player One gets 2 points!'
+        messageEl.innerHTML = 'You Have Maintained Your Peace, 2 Points Awarded'
         playerOneNum.innerHTML = playerOneScore
         bodyEl.style.backgroundColor = ""
         bodyEl.style.color = ""
         h1El.innerHTML = "PEACE"
-        console.log(' Player One Wins!')
+        console.log('Player One Won')
     }
     else if (playerOneDeck[i].value < playerTwoDeck[i].value) {
         playerTwoScore = playerTwoScore + 2
-        messageEl.innerHTML = 'Player Two gets 2 points!'
+        messageEl.innerHTML = 'Player Two Has Taken Your Peace, 2 Points Awarded'
         playerTwoNum.innerHTML = playerTwoScore
         bodyEl.style.backgroundColor = ""
         bodyEl.style.color = ""
         h1El.innerHTML = "PEACE"
-        console.log(' Player Two Wins!')
+        console.log('Player Two One')
     }
     if
         (playerOneDeck[i].value === playerTwoDeck[i].value) {
-            bodyEl.style.backgroundColor = "black"
-            bodyEl.style.color = "red"
-            messageEl.innerHTML = 'War Started'
-            h1El.innerHTML = 'WAR'
-            playerTwoScore = playerTwoScore - 4
-            playerTwoNum.innerHTML = playerTwoScore
-            playerOneScore = playerOneScore - 4
-            messageEl.innerHTML = 'Both players lose 4 points'
-            playerOneNum.innerHTML = playerOneScore
-            console.log('War Called')
+        bodyEl.style.backgroundColor = "black"
+        bodyEl.style.color = "red"
+        messageEl.innerHTML = 'War Started'
+        h1El.innerHTML = 'WAR'
+        playerTwoScore = playerTwoScore - 4
+        playerTwoNum.innerHTML = playerTwoScore
+        playerOneScore = playerOneScore - 4
+        messageEl.innerHTML = 'You Entered Into a War, Both Players Lose 4 Points'
+        playerOneNum.innerHTML = playerOneScore
+        console.log('War Called')
     }
     console.log(playerOneDeck[i], playerTwoDeck[i])
     renderCards(playerOneDeck[i], playerTwoDeck[i])
-
 }
-
-//     function warScenario() {
-//     if (playerOneDeck[3].value > playerTwoDeck[3].value) {
-//         playerOneScore = playerOneScore - 4
-//         playerOneNum.innerHTML = playerOneScore
-//         messageEl.innerHTML = 'Player One loses 4 points!'
-//         console.log(' Player One Wins!')
-//     }
-//     else (playerOneDeck[3].value < playerTwoDeck[3].value)
-//         playerTwoScore = playerTwoScore - 4
-//         playerTwoNum.innerHTML = playerTwoScore
-//         messageEl.innerHTML = 'Player Two loses 4 points!'
-//         console.log(' Player Two Wins!')
-// }
-
 
 function whoWon() {
     if (playerOneScore > playerTwoScore) {
-        messageEl.innerHTML = 'Player One Won!'
+        messageEl.innerHTML = 'You Won! Peace Has Been Restored!'
         // messageEl.style.backgroundColor = '#2bd1fc'
     }
     else if (playerOneScore < playerTwoScore) {
-        messageEl.innerHTML = 'Player Two Won, You Lose'
+        messageEl.innerHTML = 'Player Two Stole Your Peace. You Lose!'
         // messageEl.style.backgroundColor = '#f3ea5f'
     }
     else if
         (playerOneScore === playerTwoScore) {
-        messageEl.innerHTML = 'No Winner'
+        messageEl.innerHTML = 'No Winner. Try Again!'
         // messageEl.style.backgroundColor = '#6E0DD0'
     }
 }
@@ -162,32 +122,6 @@ function renderCards(oneCard, twoCard) {
 }
 
 /*----- event listeners -----*/
-//FOR NAV BAR
-// shuffleEl.addEventListener('click', () => {
-//     shuffleCards(deck)
-//     messageEl.innerHTML = "Click Deal Cards"
-//     console.log(shuffleCards(deck))
-// });
-
-// dealCardsBtnEl.addEventListener('click', () => {
-//     divideDeck()
-//     messageEl.innerHTML = "Click Play"
-// });
-
-// playBtnEl.addEventListener('click', () => {
-//     console.log(i)
-//     if (i >= 26) {
-//         return whoWon();
-//     }
-//     compareHands()
-//     i += 1;
-// });
-
-
-
-//ALL IN ONE
-
-
 backDeckOneEl.addEventListener('click', () => {
     shuffleCards(deck);
     divideDeck();
@@ -210,7 +144,7 @@ function render() {
         playerOneNum.innerHTML = "0"
         bodyEl.style.backgroundColor = ""
         bodyEl.style.color = ""
-        h1El.innerHTML="PEACE"
+        h1El.innerHTML = "PEACE"
         // messageEl.innerHTML = "Click Card to Play"
         // messageEl.style.backgroundColor = "rgb(31,81,255)"
     }
