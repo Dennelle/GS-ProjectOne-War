@@ -8,11 +8,11 @@ Peace is a two-player game.
 The object of the game is to keep your peace by drawing a higher card than the 2nd player. If you match ranks with the other player you have enter a War scenario. In a War scenario both players lose 4 points. The player with the most points after the cards run out wins. 
 
 **Features**
-Feature 1: Cards are automatically shuffled 
-Feature 2: Scores are added and subtracted
-Feature 3: Plays music on click
-Feature 4: Screen changes when War is on.
-Feature 5: CSS key frame
+_Feature 1:_ Cards are automatically shuffled 
+_Feature 2:_ Scores are added and subtracted
+_Feature 3:_ Plays music on click
+_Feature 4:_ Screen changes when War is on.
+_Feature 5:_ CSS key frame
 
 Link to Game https://dennelle.github.io/GS-ProjectOne-War/ [https://dennelle.github.io/GS-ProjectOne-War/](url)
 
@@ -32,9 +32,3 @@ Figma Wire Frame: [https://www.figma.com/file/D4C8UZgiIMefZSZIl5XD7A/Treaty?type
 
 <img width="1440" alt="Screenshot 2023-10-12 at 3 34 55 PM" src="https://github.com/Dennelle/GS-ProjectOne-War/assets/144283907/ce1a24ff-fd97-4c48-aff6-40a24a8dfc08">
 
-
-
-
-
-
-Link to Wire Frame: [Figma]([url](https://www.figma.com/file/D4C8UZgiIMefZSZIl5XD7A/Treaty?type=design&node-id=0%3A1&mode=design&t=lCmS8C5S8VWwzg01-1))
