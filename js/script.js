@@ -11,7 +11,8 @@ let playerOneScore = 0;
 let playerTwoScore = 0;
 
 let currentClassNames = { p1: "", p2: "" }
-let war = false;
+// use this to switch to War
+let war = true;
 
 
 /*----- cached elements -----*/
@@ -30,8 +31,6 @@ const bodyEl = document.querySelector("body")
 
 //new card deck code
 let backDeckOneEl = document.querySelector('#playerOneBackDeck')
-
-
 
 /*----- functions -----*/
 function buildOriginalDeck() {
@@ -89,7 +88,7 @@ function compareHands() {
         playerOneNum.innerHTML = playerOneScore
         bodyEl.style.backgroundColor = ""
         bodyEl.style.color = ""
-        h1El.innerHTML = "Treaty"
+        h1El.innerHTML = "PEACE"
         console.log(' Player One Wins!')
     }
     else if (playerOneDeck[i].value < playerTwoDeck[i].value) {
@@ -98,7 +97,7 @@ function compareHands() {
         playerTwoNum.innerHTML = playerTwoScore
         bodyEl.style.backgroundColor = ""
         bodyEl.style.color = ""
-        h1El.innerHTML = "Treaty"
+        h1El.innerHTML = "PEACE"
         console.log(' Player Two Wins!')
     }
     if
@@ -106,28 +105,32 @@ function compareHands() {
             bodyEl.style.backgroundColor = "black"
             bodyEl.style.color = "red"
             messageEl.innerHTML = 'War Started'
-            h1El.innerHTML = 'War'
+            h1El.innerHTML = 'WAR'
+            playerTwoScore = playerTwoScore - 4
+            playerTwoNum.innerHTML = playerTwoScore
+            playerOneScore = playerOneScore - 4
+            messageEl.innerHTML = 'Both players lose 4 points'
+            playerOneNum.innerHTML = playerOneScore
             console.log('War Called')
     }
     console.log(playerOneDeck[i], playerTwoDeck[i])
     renderCards(playerOneDeck[i], playerTwoDeck[i])
-    }
 
-
-    function warScenario() {
-    if (playerOneDeck[i].value > playerTwoDeck[i].value) {
-        playerOneScore = playerOneScore - 4
-        playerOneNum.innerHTML = playerOneScore
-        messageEl.innerHTML = 'Player One loses 4 points!'
-        console.log(' Player One Wins!')
-    }
-    else (playerOneDeck[i].value < playerTwoDeck[i].value)
-        playerTwoScore = playerTwoScore - 4
-        playerTwoNum.innerHTML = playerTwoScore
-        messageEl.innerHTML = 'Player Two loses 4 points!'
-        console.log(' Player Two Wins!')
 }
 
+//     function warScenario() {
+//     if (playerOneDeck[i].value > playerTwoDeck[i].value) {
+//         playerOneScore = playerOneScore - 4
+//         playerOneNum.innerHTML = playerOneScore
+//         messageEl.innerHTML = 'Player One loses 4 points!'
+//         console.log(' Player One Wins!')
+//     }
+//     else (playerOneDeck[i].value < playerTwoDeck[i].value)
+//         playerTwoScore = playerTwoScore - 4
+//         playerTwoNum.innerHTML = playerTwoScore
+//         messageEl.innerHTML = 'Player Two loses 4 points!'
+//         console.log(' Player Two Wins!')
+// }
 
 
 function whoWon() {
@@ -207,7 +210,7 @@ function render() {
         playerOneNum.innerHTML = "0"
         bodyEl.style.backgroundColor = ""
         bodyEl.style.color = ""
-        h1El.innerHTML=""
+        h1El.innerHTML="PEACE"
         // messageEl.innerHTML = "Click Card to Play"
         // messageEl.style.backgroundColor = "rgb(31,81,255)"
     }

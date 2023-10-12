@@ -1,13 +1,15 @@
 * {
     box-sizing: border-box;
     font-family: 'Young Serif', serif;
-    
+    align-items: center;
+    text-align: center;
+
 
 }
 
 #board{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
 
 #reset{
@@ -23,3 +25,34 @@ footer{
     text-align: center;
 
   }
+
+  button {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+
+    background-color: red;
+
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: red
+}
+
+button:active {
+    background-color: red;
+    transform: scale(0.95);
+}
+
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px red(0, 0, 255, 0.5);
+}
