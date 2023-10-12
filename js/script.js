@@ -25,6 +25,7 @@ let playerOneDeckEl = document.querySelector('#playerOneDeck')
 let playerTwoDeckEl = document.querySelector('#playerTwoDeck')
 const bodyEl = document.querySelector("body")
 let backDeckOneEl = document.querySelector('#playerOneBackDeck')
+let myAudio = document.querySelector('#audio')
 
 /*----- functions -----*/
 function buildOriginalDeck() {
@@ -95,16 +96,16 @@ function compareHands() {
 
 function whoWon() {
     if (playerOneScore > playerTwoScore) {
-        messageEl.innerHTML = 'You Won! Peace Has Been Restored!'
+        messageEl.innerHTML = 'You Won. Peace Has Been Restored.'
         // messageEl.style.backgroundColor = '#2bd1fc'
     }
     else if (playerOneScore < playerTwoScore) {
-        messageEl.innerHTML = 'Player Two Stole Your Peace. You Lose!'
+        messageEl.innerHTML = 'Player Two Stole Your Peace. You Lose.'
         // messageEl.style.backgroundColor = '#f3ea5f'
     }
     else if
         (playerOneScore === playerTwoScore) {
-        messageEl.innerHTML = 'No Winner. Try Again!'
+        messageEl.innerHTML = 'No Winner. Try Again.'
         // messageEl.style.backgroundColor = '#6E0DD0'
     }
 }
@@ -151,3 +152,5 @@ function render() {
 
     console.log('the reset button clicks')
 }
+
+myAudio.play()

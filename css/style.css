@@ -6,6 +6,7 @@
 }
 
 #board {
+    animation: slide-in 5000ms;
     display: flex;
     margin: auto;
     justify-content: center;
@@ -23,7 +24,10 @@ footer {
 
 p {
     text-align: center;
+}
 
+h2 {
+    animation: grow-and-shrink 2000ms;
 }
 
 button {
@@ -38,6 +42,10 @@ button {
     cursor: pointer;
 }
 
+#audio{
+    visibility: hidden;
+
+}
 
 button:hover {
     background-color: red
@@ -53,3 +61,42 @@ button:focus {
     outline: none;
     box-shadow: 0 0 5px red(0, 0, 255, 0.5);
 }
+
+@keyframes grow-and-shrink {
+    0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.5);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+@keyframes spin {
+    0% {
+        transform: rotate(0turn) scale(1);
+      }
+      25% {
+        transform: rotate(1turn) scale(1.5);
+      }
+      0% {
+        transform: rotate(1turn) scale(1);
+      }
+      /* 75% {
+        transform: rotate(0turn) scale(1.5);
+      } */
+      /* 100% {
+        transform: rotate(0turn) scale(1);
+      } */
+}
+
+@keyframes slide-in {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
