@@ -1,16 +1,15 @@
 # GS-ProjectOne-War
 
-
-# H1 Peace
+# Peace
 Peace by Dennelle is based on the classic War Game with a positive twist.
 
-## H2 Technologies:
+# Technologies:
 ☐ HTML
 ☐ CSS
 ☐ Javascript
 
 
-## H2 Getting Started:
+# Getting Started:
 Peace is a two-player game.
 
 To get started click the face down player 1 card. Click the card for every play.
@@ -18,7 +17,7 @@ To get started click the face down player 1 card. Click the card for every play.
 The object of the game is to keep your peace by drawing a higher card than the 2nd player. If you match ranks with the other player you have entered a War scenario. In a War scenario both players lose 4 points. The player with the most points after the cards run out wins.
 
 
-## H2 Features:
+# Features:
 ☐ Feature 1: Cards are automatically shuffled
 ☐ Feature 2: Scores are added and subtracted
 ☐ Feature 3: Plays music on click
@@ -26,7 +25,7 @@ The object of the game is to keep your peace by drawing a higher card than the 2
 ☐ Feature 5: CSS keyframe
 
 
-## H2 Next Steps:
+# Next Steps:
 The next iteration of Peace will have up to 4 players using two decks of cards.
 
 
@@ -58,4 +57,3 @@ Figma Wire Frame: (https://www.figma.com/file/D4C8UZgiIMefZSZIl5XD7A/Treaty?type
 
 ### H3 Special Thanks:
 Music by: (https://soundimage.org/)
-
