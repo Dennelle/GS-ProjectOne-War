@@ -1,131 +1,152 @@
 * {
-    box-sizing: border-box;
-    font-family: 'MedievalSharp', cursive, serif;
-    align-items: center;
-    text-align: center;
+  box-sizing: border-box;
+  font-family: 'MedievalSharp', cursive, serif;
+  align-items: center;
+  text-align: center;
 }
 
-body  {
-    background: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
-    background-size:cover;
-        -webkit-animation: slidein 100s;
-        animation: slidein 100s;
+body {
+  background: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+  background-size: cover;
+  -webkit-animation: slidein 100s;
+  animation: slidein 100s;
 
-        -webkit-animation-fill-mode: forwards;
-        animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 
-        -webkit-animation-iteration-count: infinite;
-        animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 
-        -webkit-animation-direction: alternate;
-        animation-direction: alternate;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
 }
 
 #board {
-    animation: slide-in 5000ms;
-    display: flex;
-    margin: auto;
-    justify-content: center;
+  animation: slide-in 5000ms;
+  display: flex;
+  margin: auto;
+  justify-content: center;
 }
 
 #reset {
-    justify-content: center;
+  justify-content: center;
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 p {
-    text-align: center;
+  text-align: center;
 }
 
 h2 {
-    animation: grow-and-shrink 2000ms;
+  animation: grow-and-shrink 2000ms;
 }
 
 button {
-    font-family: 'Arial', sans-serif;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    background-color: rgb(139, 0, 0);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  background-color: rgb(139, 0, 0);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-#audio{
-    visibility: hidden;
+#audio {
+  visibility: hidden;
 }
 
-#audio2{
+#audio2 {
   visibility: hidden;
 }
 
 button:hover {
-    background-color: rgb(139, 0, 0);
+  background-color: rgb(139, 0, 0);
 }
 
 button:active {
-    background-color: rgb(139, 0, 0);
-    transform: scale(0.95);
+  background-color: rgb(139, 0, 0);
+  transform: scale(0.95);
 }
 
 
 button:focus {
-    outline: none;
-    box-shadow: 0 0 5px red(0, 0, 255, 0.5);
+  outline: none;
+  box-shadow: 0 0 5px red(0, 0, 255, 0.5);
 }
 
 @keyframes grow-and-shrink {
-    0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.5);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
 
 @keyframes spin {
-    0% {
-        transform: rotate(0turn) scale(1);
-      }
-      25% {
-        transform: rotate(1turn) scale(1.5);
-      }
-      0% {
-        transform: rotate(1turn) scale(1);
-      }
-      75% {
-        transform: rotate(0turn) scale(1.5);
-      }
-      100% {
-        transform: rotate(0turn) scale(1);
-      }
+  0% {
+    transform: rotate(0turn) scale(1);
+  }
+
+  25% {
+    transform: rotate(1turn) scale(1.5);
+  }
+
+  0% {
+    transform: rotate(1turn) scale(1);
+  }
+
+  75% {
+    transform: rotate(0turn) scale(1.5);
+  }
+
+  100% {
+    transform: rotate(0turn) scale(1);
+  }
 }
 
 @keyframes slide-in {
-    from {
-      transform: translateX(-100%);
-    }
-    to {
-      transform: translateX(0%);
-    }
+  from {
+    transform: translateX(-100%);
   }
+
+  to {
+    transform: translateX(0%);
+  }
+}
 
 
 @-webkit-keyframes slidein {
-from {background-position: top; background-size:3000px; }
-to {background-position: -100px 0px;background-size:2750px;}
+  from {
+    background-position: top;
+    background-size: 3000px;
+  }
+
+  to {
+    background-position: -100px 0px;
+    background-size: 2750px;
+  }
 }
 
 @keyframes slidein {
-from {background-position: top;background-size:3000px; }
-to {background-position: -100px 0px;background-size:2750px;}
+  from {
+    background-position: top;
+    background-size: 3000px;
+  }
+
+  to {
+    background-position: -100px 0px;
+    background-size: 2750px;
+  }
 }
