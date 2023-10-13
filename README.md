@@ -3,7 +3,7 @@
 # Peace
 Peace by Dennelle is based on the classic War Game with a positive twist.
 
-# Technologies:
+### Technologies:
 ☐ HTML
 ☐ CSS
 ☐ Javascript
@@ -55,5 +55,5 @@ Figma Wire Frame: (https://www.figma.com/file/D4C8UZgiIMefZSZIl5XD7A/Treaty?type
 <img width="1440" alt="Screenshot 2023-10-12 at 3 34 55 PM" src="https://github.com/Dennelle/GS-ProjectOne-War/assets/144283907/ce1a24ff-fd97-4c48-aff6-40a24a8dfc08">
 
 
-### H3 Special Thanks:
+# Special Thanks:
 Music by: (https://soundimage.org/)
