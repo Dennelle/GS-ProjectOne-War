@@ -29,7 +29,10 @@ The object of the game is to keep your peace by drawing a higher card than the 2
 
 
 ### Next Steps:
-The next iteration of Peace includes replacing cards with gemstones that have power levels. If your gemstones matches another's players gemstone you have to answer a trivia question in order win all the points.
+The next iteration of Peace includes:
+-Replacing cards with gemstones that have power levels. If your gemstones matches another's players gemstone you have to answer a trivia question in order win all the points.
+
+-Adding a 3 or 4 second timer between card play.
 
 Link to Game (https://dennelle.github.io/GS-ProjectOne-War/)
 
