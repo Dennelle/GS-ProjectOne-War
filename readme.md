@@ -1,6 +1,6 @@
 # GS-ProjectOne-War
 
-# H1 Peace
+#H1Peace
 Peace by Dennelle is based on the classic War Game with a positive twist.
 
 ## H2 Technologies:
@@ -11,7 +11,7 @@ Peace by Dennelle is based on the classic War Game with a positive twist.
 ## H2 Getting Started:
 Peace is a two-player game.
 
-To get started click the facdown player 1 card. Click the card for every play.
+To get started click the face down player 1 card. Click the card for every play.
 
 The object of the game is to keep your peace by drawing a higher card than the 2nd player. If you match ranks with the other player you have enter a War scenario. In a War scenario both players lose 4 points. The player with the most points after the cards run out wins.
 
