@@ -98,16 +98,13 @@ function compareHands() {
 function whoWon() {
     if (playerOneScore > playerTwoScore) {
         messageEl.innerHTML = 'You Won. Peace Has Been Restored.';
-        // messageEl.style.backgroundColor = '#2bd1fc'
     }
     else if (playerOneScore < playerTwoScore) {
         messageEl.innerHTML = 'Player Two Stole Your Peace. You Lose.'
-        // messageEl.style.backgroundColor = '#f3ea5f'
     }
     else if
         (playerOneScore === playerTwoScore) {
         messageEl.innerHTML = 'No Winner. Try Again.'
-        // messageEl.style.backgroundColor = '#6E0DD0'
     }
 }
 
