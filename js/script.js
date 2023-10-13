@@ -116,7 +116,7 @@ function renderCards(oneCard, twoCard) {
         playerOneDeckEl.classList.remove(currentClassNames.p1);
         playerTwoDeckEl.classList.remove(currentClassNames.p2);
     }
-    //remove previously added class name
+
     playerOneDeckEl.classList.add(oneCard.face);
     playerTwoDeckEl.classList.add(twoCard.face);
     currentClassNames.p1 = oneCard.face
