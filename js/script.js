@@ -26,7 +26,7 @@ const bodyEl = document.querySelector("body")
 let backDeckOneEl = document.querySelector('#playerOneBackDeck')
 let myAudio = document.querySelector('#audio')
 let i = 0
-myAudio.play()
+// myAudio.play()
 
 /*----- functions -----*/
 function buildOriginalDeck() {
