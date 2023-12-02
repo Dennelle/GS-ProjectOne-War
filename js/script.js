@@ -19,14 +19,14 @@ const dealCardsBtnEl = document.querySelector('#dealCards');
 const playerOneNum = document.querySelector('#number1')
 const playerTwoNum = document.querySelector('#number2')
 const playBtnEl = document.querySelector('#playButton')
-let resetBtnEl = document.querySelector('#reset')
-let playerOneDeckEl = document.querySelector('#playerOneDeck')
-let playerTwoDeckEl = document.querySelector('#playerTwoDeck')
+const resetBtnEl = document.querySelector('#reset')
+const playerOneDeckEl = document.querySelector('#playerOneDeck')
+const playerTwoDeckEl = document.querySelector('#playerTwoDeck')
 const bodyEl = document.querySelector("body")
-let backDeckOneEl = document.querySelector('#playerOneBackDeck')
-let myAudio = document.querySelector('#audio')
+const backDeckOneEl = document.querySelector('#playerOneBackDeck')
+const descriptionEl = document.querySelector('#description')
+// const myAudio = document.querySelector('#audio')
 let i = 0
-// myAudio.play()
 
 /*----- functions -----*/
 function buildOriginalDeck() {
@@ -59,41 +59,49 @@ function divideDeck() {
     // console.log(playerTwoDeck);
 }
 
+//function to hide the instructions
+function hideInstructions(){
+    if(descriptionEl.style.display === "block"){
+        descriptionEl.style.display = "none"
+    } else {
+        descriptionEl.style.display = "block";
+    }
+};
+
+// compares the value of each hand to determine the winner of the hand or if there is a tie
 function compareHands() {
     if (playerOneDeck[i].value > playerTwoDeck[i].value) {
         playerOneScore = playerOneScore + 2
-        messageEl.innerHTML = 'You Have Maintained Your Peace, 2 Points Awarded'
+        renderMessage ('You Have Maintained Your Peace, 2 Points Awarded')
         playerOneNum.innerHTML = playerOneScore
         bodyEl.style.background = ""
         bodyEl.style.color = ""
         h1El.innerHTML = "PEACE"
         console.log('Player One Won')
-    }
-    else if (playerOneDeck[i].value < playerTwoDeck[i].value) {
+    } else if (playerOneDeck[i].value < playerTwoDeck[i].value) {
         playerTwoScore = playerTwoScore + 2
-        messageEl.innerHTML = 'Player Two Has Taken Your Peace, 2 Points Awarded'
+        renderMessage ('Player Two Has Taken Your Peace, 2 Points Awarded')
         playerTwoNum.innerHTML = playerTwoScore
         bodyEl.style.background = ""
         bodyEl.style.color = ""
         h1El.innerHTML = "PEACE"
         console.log('Player Two One')
-    }
-    if
-        (playerOneDeck[i].value === playerTwoDeck[i].value) {
+    } else if (playerOneDeck[i].value === playerTwoDeck[i].value) {
         bodyEl.style.background = "black"
         bodyEl.style.color = "red"
-        messageEl.innerHTML = 'War Started'
+        renderMessage ('War Started')
         h1El.innerHTML = 'WAR'
         playerTwoScore = playerTwoScore - 4
         playerTwoNum.innerHTML = playerTwoScore
         playerOneScore = playerOneScore - 4
-        messageEl.innerHTML = 'You Entered Into a War, Both Players Lose 4 Points'
+        renderMessage ('You Entered Into a War, Both Players Lose 4 Points')
         playerOneNum.innerHTML = playerOneScore
         console.log('War Called')
-    }
-    console.log(playerOneDeck[i], playerTwoDeck[i])
+    } else {
+    console.log(playerOneDeck[i], playerTwoDeck[i])}
+
     renderCards(playerOneDeck[i], playerTwoDeck[i])
-}
+};
 
 function whoWon() {
     if (playerOneScore > playerTwoScore) {
@@ -118,6 +126,10 @@ function renderCards(oneCard, twoCard) {
     playerTwoDeckEl.classList.add(twoCard.face);
     currentClassNames.p1 = oneCard.face
     currentClassNames.p2 = twoCard.face
+}
+
+function renderMessage(msg) {
+    messageEl.innerText= (msg)
 }
 
 /*----- event listeners -----*/

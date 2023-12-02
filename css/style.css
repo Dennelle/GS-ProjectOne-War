@@ -21,6 +21,9 @@ body {
   animation-direction: alternate;
 }
 
+#description {
+  display: none;
+}
 #board {
   animation: slide-in 5000ms;
   display: flex;
